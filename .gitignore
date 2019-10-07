@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 void move(char src,char desk){
-cout<<src<<"--"<<desk;
+cout<<src<<"--"<<desk<<endl;
 }
 void hanoi(int n,char src,char medium,char desk){
 if (n==1)
@@ -17,6 +17,6 @@ int n;
 cout<<"Enter the number of disks: ";
 cin>>n;
 cout<<"the steps to moving "<<n<<" disks: "<<endl;
-hanoi(n,'A','B",'C');
+hanoi(n,'A','B','C');
 return 0;
 }
