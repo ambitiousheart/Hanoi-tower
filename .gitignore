@@ -1,32 +1,22 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include<iostream>
+using namespace std;
+void move(char src,char desk){
+cout<<src<<"--"<<desk;
+}
+void hanoi(int n,char src,char medium,char desk){
+if (n==1)
+move(src,desk);
+else{
+hanoi(n-1,src,desk,medium);
+move(src,desk);
+hanoi(n-1,medium,src,desk);
+}
+}
+int main(){
+int n;
+cout<<"Enter the number of disks: ";
+cin>>n;
+cout<<"the steps to moving "<<n<<" disks: "<<endl;
+hanoi(n,'A','B",'C');
+return 0;
+}
